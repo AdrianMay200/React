@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+//El componente Square renderiza un simple <button>
 function Square({ value, onSquareClick }) {
   return (
     <button className="square" onClick={onSquareClick}>
@@ -8,6 +8,7 @@ function Square({ value, onSquareClick }) {
   );
 }
 
+//con la funcion Board renderizamos 9 cuadrados 
 function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
     if (calculateWinner(squares) || squares[i]) {
@@ -31,6 +32,7 @@ function Board({ xIsNext, squares, onPlay }) {
   }
 
   return (
+    //aqui estamos utilizando la funcion board esto a su vez renderiza lo 9 cuadros 
     <>
       <div className="status">{status}</div>
       <div className="board-row">
@@ -51,7 +53,7 @@ function Board({ xIsNext, squares, onPlay }) {
     </>
   );
 }
-
+//El componente Game renderiza un table con valores de posición por defecto
 export default function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
