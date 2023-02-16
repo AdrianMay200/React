@@ -1,21 +1,21 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; //este es el borde de la caja o pantalla en general
 }
 
 body {
-  font-family: sans-serif;
-  margin: 20px;
+  font-family: sans-serif; //tipo de fuente
+  margin: 20px; //margen en pixeles
   padding: 0;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: 22px;
+  margin-top: 0; //margen en pixeles
+  font-size: 22px; //tamaño de la letra para h1
 }
 
 h2 {
-  margin-top: 0;
-  font-size: 20px;
+  margin-top: 0; //margen en pixeles
+  font-size: 20px;//tamaño de la letra para h1
 }
 
 h3 {
@@ -57,22 +57,22 @@ body {
 }
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background: #fff;// colo de fondo
+  border: 10px solid #999; //borde
   float: left;
-  font-size: 24px;
+  font-size: 24px; //tamaño de la imagen
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 34px;
+  line-height: 52px; // altura de las lineas
+  height: 74px;
+  margin-right: -1px;//margen de abajo
+  margin-top: -1px; //margen de arriba
+  padding: 8; //relleno
+  text-align: center; // alineamos el texto al centro
+  width: 34px; //ancho de los cuadros
 }
 
 .board-row:after {
-  clear: both;
+  clear: both; //limpiamos los ambos contenedores 
   content: '';
   display: table;
 }
