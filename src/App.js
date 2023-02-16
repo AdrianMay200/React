@@ -1,8 +1,10 @@
 import { useState } from 'react';
 
+//Si haces click en un cuadrado ahora, deberías ver ‘click’ en la consola de desarrollo de delnavegador
 function Square({ value, onSquareClick }) {
   return (
-    <button className="square" onClick={onSquareClick}>
+    //onClick es una función que Square puede llamar cuando sea clickeado
+    <button className="square" onClick={onSquareClick}> 
       {value}
     </button>
   );
@@ -21,7 +23,8 @@ function Board({ xIsNext, squares, onPlay }) {
     }
     onPlay(nextSquares);
   }
-
+//Llamaremos a calculateWinner(squares) en el método render del componente Board para revisar si un jugador ha ganado. Si un jugador ha ganado, podemos mostrar un texto como: 
+//“Winner: X” o “Winner: O”. Reemplazaremos la declaración del status en el método render de Board con este código:
   const winner = calculateWinner(squares);
   let status;
   if (winner) {
@@ -79,7 +82,7 @@ export default function Game() {
       <li key={move}>
         <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
-    );
+    );// onClick es una función que Square puede llamar cuando sea clickeado
   });
 
   return (
@@ -93,7 +96,7 @@ export default function Game() {
     </div>
   );
 }
-
+//Dado un arreglo de 9 cuadrados, esta función comprobará si hay un ganador y devolverá 'X', 'O' o null según corresponda.
 function calculateWinner(squares) {
   const lines = [
     [0, 1, 2],
